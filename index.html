@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나무위키 게임</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#main">메인</a></li>
+            <li><a href="#edit">랭킹 수정</a></li>
+        </ul>
+    </nav>
+
+    <div id="main" class="container">
+        <header class="header">
+            <h1>🌳 나무위키 게임</h1>
+            <p class="date">2024.12.19.(목) 기준</p>
+        </header>
+
+        <section class="intro-section">
+            <h2><i class="fas fa-star"></i> 게임 소개</h2>
+            <div class="intro-content">
+                <p class="highlight">최적의 경로를 찾아가는 전략적 사고력 게임!</p>
+                <div class="features">
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>알고리즘 사고력 향상</h3>
+                        <p>최단 경로를 찾아가는 과정에서 알고리즘적 사고력이 향상됩니다.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>지식 연결성 강화</h3>
+                        <p>서로 다른 주제 간의 연결고리를 찾으며 지식의 확장성을 경험합니다.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>협동과 경쟁</h3>
+                        <p>다른 플레이어들과의 경쟁을 통해 더 효율적인 경로를 발견합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rules-section">
+            <h2><i class="fas fa-scroll"></i> 게임 규칙</h2>
+            <div class="rules-container">
+                <ul class="rules-list">
+                    <li>시작값과 끝값은 나무위키에 등록된 단어로 합니다</li>
+                    <li>Control + F는 서로 양 선수 합의하에 사용이 가능합니다</li>
+                    <li>페이지 이동수를 1트(횟수)로 계산합니다</li>
+                    <li>동일한 페이지 이동수를 보유한다면 먼저 도착한 사람이 승리합니다</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="ranking-section">
+            <h2 class="section-title"><i class="fas fa-crown"></i> 계급 현황</h2>
+            
+            <!-- 왕 계급 -->
+            <div class="rank-category">
+                <h3 class="rank-category-title">왕</h3>
+                <div class="rank-row">
+                    <div class="rank-box king">
+                        <div class="rank-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="rank-content">
+                            <h3>왕</h3>
+                            <p class="rank-name">엔드류 더 그레잇</p>
+                            <button class="view-privileges">클릭하여 권한 보기</button>
+                        </div>
+                        <div class="privileges-modal">
+                            <div class="modal-content">
+                                <h4>왕의 권한</h4>
+                                <ul>
+                                    <li>머리위에 나무위키 권위자가 보임</li>
+                                    <li>CV에 "나무위키권위자" 작성 가능</li>
+                                </ul>
+                                <button class="close-modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 귀족 계급 -->
+            <div class="rank-category">
+                <h3 class="rank-category-title">귀족</h3>
+                <div class="rank-row">
+                    <div class="rank-box noble">
+                        <div class="rank-icon">
+                            <i class="fas fa-chess-queen"></i>
+                        </div>
+                        <div class="rank-content">
+                            <h3>귀족</h3>
+                            <p class="rank-name">주세페 니콜라이 승교</p>
+                            <button class="view-privileges">클릭하여 권한 보기</button>
+                        </div>
+                        <div class="privileges-modal">
+                            <div class="modal-content">
+                                <h4>귀족의 권한</h4>
+                                <ul>
+                                    <li>아래계층에게 나무위키 거부권 행사가능</li>
+                                    <li>1명의 상위계층에게 허락받으면 사용가능</li>
+                                </ul>
+                                <button class="close-modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 추가 귀족 카드 자리 -->
+                </div>
+            </div>
+
+            <!-- 기사 계급 -->
+            <div class="rank-category">
+                <h3 class="rank-category-title">기사</h3>
+                <div class="rank-row">
+                    <div class="rank-box knight">
+                        <div class="rank-icon">
+                            <i class="fas fa-chess-knight"></i>
+                        </div>
+                        <div class="rank-content">
+                            <h3>기사</h3>
+                            <p class="rank-name">던컨학준</p>
+                            <button class="view-privileges">클릭하여 권한 보기</button>
+                        </div>
+                        <div class="privileges-modal">
+                            <div class="modal-content">
+                                <h4>기사의 권한</h4>
+                                <ul>
+                                    <li>아래계층에게 나무위키 거부권 행사가능</li>
+                                    <li>2명의 상위계층에게 허락받으면 사용가능</li>
+                                </ul>
+                                <button class="close-modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 추가 기사 카드 자리 -->
+                </div>
+            </div>
+
+            <!-- 평민 계급 -->
+            <div class="rank-category">
+                <h3 class="rank-category-title">평민</h3>
+                <div class="rank-row">
+                    <div class="rank-box commoner">
+                        <div class="rank-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="rank-content">
+                            <h3>평민</h3>
+                            <p class="rank-name">김예림</p>
+                            <button class="view-privileges">클릭하여 권한 보기</button>
+                        </div>
+                        <div class="privileges-modal">
+                            <div class="modal-content">
+                                <h4>평민의 권한</h4>
+                                <ul>
+                                    <li>아래계층에게 나무위키 거부권 행사가능</li>
+                                    <li>3명의 상위계층에게 허락받으면 사용가능</li>
+                                </ul>
+                                <button class="close-modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 천민 계급 -->
+            <div class="rank-category">
+                <h3 class="rank-category-title">천민</h3>
+                <div class="rank-row">
+                    <div class="rank-box peasant">
+                        <div class="rank-icon">
+                            <i class="fas fa-user-alt-slash"></i>
+                        </div>
+                        <div class="rank-content">
+                            <h3>천민</h3>
+                            <p class="rank-name">노예1(조준제)</p>
+                            <button class="view-privileges">클릭하여 권한 보기</button>
+                        </div>
+                        <div class="privileges-modal">
+                            <div class="modal-content">
+                                <h4>천민의 권한</h4>
+                                <ul>
+                                    <li>아래계층에게 나무위키 거부권 행사가능</li>
+                                    <li>4명의 상위계층에게 허락받으면 사용가능</li>
+                                </ul>
+                                <button class="close-modal">닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="edit" class="edit-container">
+        <h2>랭킹 관리</h2>
+        <form id="editForm">
+            <div class="edit-form-group">
+                <div class="edit-form-control">
+                    <label for="actionType">작업 선택</label>
+                    <select id="actionType">
+                        <option value="edit">기존 멤버 수정</option>
+                        <option value="add">새 멤버 추가</option>
+                    </select>
+                </div>
+                <div class="edit-form-control">
+                    <label for="rankSelect">계급 선택</label>
+                    <select id="rankSelect">
+                        <option value="왕">왕</option>
+                        <option value="귀족">귀족</option>
+                        <option value="기사">기사</option>
+                        <option value="평민">평민</option>
+                        <option value="천민">천민</option>
+                    </select>
+                </div>
+                <div class="edit-form-control">
+                    <label for="nameInput">이름</label>
+                    <input type="text" id="nameInput" placeholder="이름을 입력하세요">
+                </div>
+            </div>
+            <div class="edit-buttons">
+                <button type="submit" class="edit-button">수정하기</button>
+                <button type="button" class="edit-button add" id="addMember">추가하기</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
